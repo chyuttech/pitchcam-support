@@ -15,3 +15,4 @@ th { color: var(--dim); font-weight: 600; }
 a { color: var(--accent); }
 .wrap { overflow-x: auto; }
 footer { margin-top: 36px; color: var(--dim); font-size: 13px; }
+h1.lang { font-size: 22px; margin: 48px 0 0; padding-top: 24px; border-top: 1px solid var(--line); }
