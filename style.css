@@ -16,3 +16,25 @@ a { color: var(--accent); }
 .wrap { overflow-x: auto; }
 footer { margin-top: 36px; color: var(--dim); font-size: 13px; }
 h1.lang { font-size: 22px; margin: 48px 0 0; padding-top: 24px; border-top: 1px solid var(--line); }
+/* 使用者手冊 */
+.manual main { max-width: 860px; }
+.manual { font-size: 17px; }
+.toc ol { padding-left: 22px; margin: 8px 0; }
+.toc li { margin: 2px 0; }
+.manual section h2 { scroll-margin-top: 16px; }
+ol.steps { list-style: none; counter-reset: step; padding: 0; margin: 12px 0; }
+ol.steps > li { counter-increment: step; position: relative; padding: 2px 0 10px 44px; }
+ol.steps > li::before { content: counter(step); position: absolute; left: 0; top: 2px; width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+.btn { display: inline-block; padding: 0 6px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); font-weight: 600; white-space: nowrap; }
+.mk { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: #e5484d; color: #fff; font-size: 13px; font-weight: 700; vertical-align: 2px; }
+.note { border-left: 4px solid #e5a000; background: color-mix(in srgb, #e5a000 10%, transparent); padding: 8px 12px; border-radius: 6px; margin: 12px 0; }
+.note.warn { border-color: #e5484d; background: color-mix(in srgb, #e5484d 10%, transparent); }
+figure.shot { position: relative; margin: 14px 0; }
+figure.shot img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); }
+figure.shot figcaption { color: var(--dim); font-size: 14px; margin-top: 6px; }
+.shot-wrap { position: relative; }
+.shot-wrap .box { position: absolute; border: 2px solid #e5484d; border-radius: 6px; pointer-events: none; }
+.shot-wrap .box span { position: absolute; left: -4px; top: -28px; width: 24px; height: 24px; border-radius: 50%; background: #e5484d; color: #fff; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 2px #fff; }
+.langs { color: var(--dim); font-size: 14px; }
+.shot-wrap .box.below span { top: auto; bottom: -28px; }
+@media (max-width: 520px) { .shot-wrap .box span { width: 18px; height: 18px; font-size: 11px; left: -3px; top: -21px; } .shot-wrap .box.below span { top: auto; bottom: -21px; } .manual { font-size: 16px; } }
